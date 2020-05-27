@@ -1,0 +1,53 @@
+<script src="jquery-3.5.1.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function(){
+        $("#added").click(function(){
+            var data={"task":$("#add").val()};
+            $.post("todo.php",{"data":data},function(r,s){
+                if(r=="done")
+                {
+                   $("#add").val("");
+                   
+                }
+            });
+        });
+        $.post("printdatabase.php",function(r,s){
+            var p=JSON.parse(r);
+            for(var i=0;i<p.length;i++)
+            {
+                $("#res").append(p[i].task+"<br><br>");
+            }
+
+        });
+        $("#delete").click(function(){
+            var data={"task":$("#completed").val()};
+            $.post("delelement.php",{"data":data},function(r,s){
+                if(r=="done")
+                $("#completed").val("");
+            });
+        });
+        $("#deleteall").click(function(){
+            $.post("deldatabase.php",function(){
+
+            });
+        });
+    });
+</script>
+
+<html>
+    <head>
+        <title>My ToDo List </title>
+        <link rel="stylesheet" type="text/css" href="todo.css">
+    </head>
+    <body>
+        <h2>My ToDo List</h2>
+        <input type="text" id="add" size="100" placeholder="Type here to add to your ToDo list">
+        <input type="button" id="added" value="Add">
+        <div id="res" style="padding-top:20px; font-size: 23px; padding-left: 20px;">
+        </div>
+        <br><br><br>
+        <input type="text" id="completed" style="font-size: 23px;" size="25" placeholder="Great! You've completed a task">
+        <input type="button" id="delete" value="Delete" style="height:36px; width:90px; font-size: 18px;">  
+        <input type="button" id="deleteall" value="Delete All" style="height:36px; width:90px; font-size: 18px;">   
+    </body>
+</html>
