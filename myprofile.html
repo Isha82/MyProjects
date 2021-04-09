@@ -2,15 +2,43 @@
     <head>
         <title>ItsIsha</title>
         <link rel="stylesheet" type="text/css" href="mp.css">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+        <script>
+          $(document).ready(function(){
+        $("#submit").click(function(r,s){
+                if(r=="sucess")
+                {
+                  $("#result").html("Thanks for connecting. Will reach out to you soon.");   
+                }
+                else
+                $("#result").html("Sorry! There was an error in sending your form.");
+            });
+        });
+          </script>
+        
         <style>
-          .container-fluid{
+        
+  
+          html{
+            scroll-behavior:smooth ;
+            
+          }
+ 
+          
+         .container-fluid{
             width:100%;
-            padding:0px 0px 70px 0px;
+            padding:0px 0px 0px 0px;
+            width: 100%;
           }
           h1{
             text-align: center;
@@ -29,6 +57,9 @@
             font-size: 30px; 
             font-weight:bolder;
             margin-left: 80px;
+          }
+          h6{
+            font-size: 17px;
           }
           ul{
             list-style: none;
@@ -56,59 +87,209 @@
           h4{
             color:white;
             font-weight: bolder;
-            font-size: 50px;
+            font-size: 80px;
+          }
+          /*Flip Card*/
+          
+          .flip-container {
+	         perspective: 1000px;
+  
+            }
+	
+	        .flip-container:hover .flipper, .flip-container.hover .flipper {
+         	transform: rotateY(180deg);
+	         }
+
+          .flip-container, .front, .back {
+         	width: 220px;
+        	height: 300px;
+          background-color: whitesmoke;
+          margin:30px;
+          justify-content: center;
+          align-content: center;
+  
           }
 
-        </style>
+          .flipper {
+         	transition: 0.6s;
+       	transform-style: preserve-3d;
+
+	          position: relative;
+         }
+
+       .front, .back {
+	      backface-visibility: hidden;
+
+      	position: absolute;
+      	top: 0;
+      	left: 0;
+        }
+
+
+       .front {
+	      z-index: 2;
+	
+	      transform: rotateY(0deg);
+        }
+
+       .back {
+      	transform: rotateY(180deg);
+       }
+
+       
+       /* Contact me */
+       
+       @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+.ccheader {
+	margin: 0 auto;
+	padding: 2em;
+	text-align: center;
+}
+
+.ccheader h1 {
+	margin: 0;
+	font-weight: 300;
+	font-size: 2.5em;
+	line-height: 1.3;
+}
+.ccheader {
+	margin: 0 auto;
+	padding: 2em;
+	text-align: center;
+}
+
+.ccheader h1 {
+	margin: 0;
+	font-weight: 300;
+	font-size: 2.5em;
+	line-height: 1.3;
+}
+
+/* Form CSS*/
+
+.ccform {
+   margin: 0 auto;
+    width: 800px;
+}
+.ccfield-prepend{
+	margin-bottom:10px;
+	width:100%;
+}
+
+.ccform-addon{
+	color:#000000; 
+	float:left;
+	padding:8px;
+	width:8%;
+	background:#FFFFFF;
+	text-align:center;	
+}
+
+.ccformfield {
+	color:#000000; 
+	background:#FFFFFF;
+	border:none;
+	padding:15.5px;
+	width:91.9%;
+	display:block;
+	font-family: 'Lato',Arial,sans-serif;
+	font-size:14px;
+}
+
+.ccformfield {
+	font-family: 'Lato',Arial,sans-serif;
+}
+.ccbtn{
+	display:block;
+	border:none;
+	background:black;
+	color:#FFFFFF;
+	padding:12px 25px;
+	cursor:pointer;
+	text-decoration:none;
+	font-weight:bold;
+  border-radius: 5px;
+}
+.ccbtn:hover{
+	background:#d8850e;
+
+}
+.credit {
+  color:#fff;
+  width: 800px;
+  clear:both;
+margin:0 auto;
+  line-height:25px;
+ padding: 25px 50px; 
+}
+.credit em{
+margin-right:5px;
+}
+</style>
+
     </head>
     <body>
       <div class="container-fluid">
-        <img src="program.jpg" style="height:100%; width:100%; overflow: hidden; margin:0;opacity:0.8">
-        <div class="top-left" style="position:absolute; top:8px; left:16px;">
+           <img src="program.jpg" style="height:100%; width:100%; overflow-x: hidden; margin:0;opacity:0.6">
+        <div class="top-left" style="position:absolute; top:8px; left:0px;right:0px;width: 100%;">
 
-          <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-            <a class="navbar-brand" id="isha"  style=" color:white; font-weight: 250;font-size: 60px;"href="#">ISHA</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+
+          <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <a class="navbar-brand" id="isha"  style=" color:white; font-weight:500;font-size: 50px;"href="#">
+              ISHA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0" >
+                <li class="nav-item active" style="font-size:16px;">
+                  <a class="nav-link" href="#" style="color:white;">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#" style="align-content: right;">About</a>
+                <li class="nav-item" style="font-size:16px;">
+                  <a class="nav-link" href="#about" style="color:white;">About</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Skills</a>
+                <li class="nav-item" style="font-size:16px;">
+                  <a class="nav-link" href="#skills" style="color:white;">Skills</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Projects</a>
+                <li class="nav-item" style="font-size:16px;">
+                  <a class="nav-link" href="#projects" style="color:white;">Projects</a>
+                </li>
+                <li class="nav-item" style="font-size:16px;">
+                  <a class="nav-link" href="#contact" style="color:white;">Contact me</a>
                 </li>
               </ul>
             </div>
           </nav>
+          
 
 
         </div>
         <div class="centered" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
-          <h4>Hey! I am Isha</h4>
-          <h5 style="color:white; font-weight: bolder;font-size: 40px;">I am a Competitive Programmer</h5>
+         
+          <h5 style="color:white; font-weight: bolder;font-size: 40px;">I am a Competitive Programmer</h5><br>
+          <span>
+            <a href="https://github.com/Isha82" target="_blank">
+            <i class="fa fa-github-square" style="color: white;font-size:24px;position:centered;"></i></a>
+            <a href="https://www.linkedin.com/in/isha-goel30" target="_blank">
+            <i class="fa fa-linkedin-square" style="font-size:24px;color:white;padding-left: 20px;"></i></a>
+          </span>
         </div>
       </div>
         <br><br><br>
 
         <!--About-->
-         <h1>About Me!</h1>
+         <h1 id="about">About Me!</h1>
           <h3>Hey there, I am Isha Goel. I am a competitive Programmer</h3>
-         <p> I am Isha Goel. I am B.Tech senior undergraduate at ABES Engineering College.<br> 
-        I am passionate about competitive Programming. I am a developer too. </p>
+         <h3> I am B.Tech senior undergraduate at ABES Engineering College.<br> 
+        I am passionate about competitive Programming. I am a developer too. </h3>
         <br><br><br>
+
+
         <!-- Skillset-->
      <div class="container-fluid" style="background-color: whitesmoke;">
          <div class="row-fix">
-          <h1>Skills</h1>
+          <h1 id="skills">Skills</h1>
          </div>
           <br><br>
         <ul id="skills">
@@ -162,6 +343,396 @@
         </div> 
         </ul>
       </div>
-      <br>
+      <br><br><br>
+
+
+      <!-- My Projects -->
+      <div class="row-fix">
+        <h1 id="projects">My Projects</h1>
+        <br><br>
+
+        <!-- Flip Cards -->
+        <div class="container my-8  " style="padding-bottom: 40px;">
+          <div class="row  ">
+            
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="front">
+                  <br><br>
+                  <h1>To Do</h1>
+                  <h1>List</h1><br>
+                </div>
+                <div class="back">
+                  <br>
+                  <h3>My first web development Project.</h3><br>
+                  <h6 style="padding-left: 10px;">Technology Stack</h6>
+                  <ul style="list-style: circle;">
+                    <li><h3>HTML</h3></li>
+                    <li><h3>CSS</h3></li>
+                    <li><h3>PHP</h3></li>
+                    <li><h3>MySql</h3></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="front">
+                  <br><br>
+                  <h1>Pizza</h1>
+                  <h1> Palace</h1><br>
+                </div>
+                <div class="back">
+                 <br>
+                 <h3>A pizza delivery Website.</h3><br>
+                  <h6 style="padding-left: 10px;">Technology Stack</h6>
+                  <ul style="list-style: circle;">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>PHP</li>
+                    <li>MySql</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="front">
+                  <br>
+                 
+                </div>
+                <div class="back">
+                  <br> 
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+       <br><br><br>
+       
+       <!--Contact me-->
+       <div class="container-fluid" style="background-color:whitesmoke;padding-top: 20px;">
+            <h1 id="contact">Drop me a Line!</h1><br><br>	
+        
+        <div class="wrapper" id="reused_form">
+            <form method="post" action="myp.php" class="ccform" id="reused_form">
+            <div class="ccfield-prepend">
+                <span class="ccform-addon"><i class="fa fa-user fa-2x"></i></span>
+                <input class="ccformfield" name="name" type="text" id="name" placeholder="Full Name" required>
+            </div>
+            <div class="ccfield-prepend">
+                <span class="ccform-addon"><i class="fa fa-envelope fa-2x"></i></span>
+                <input class="ccformfield" name="email" type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="ccfield-prepend">
+                <span class="ccform-addon"><i class="fa fa-mobile-phone fa-2x"></i></span>
+                <input class="ccformfield" name="phone" type="text" id="phone" placeholder="Phone">
+            </div>
+             <div class="ccfield-prepend">
+                <span class="ccform-addon"><i class="fa fa-info fa-2x"></i></span>
+                <input class="ccformfield" type="text" name="sub" id="sub" placeholder="Subject" required>
+            </div>
+            <div class="ccfield-prepend">
+                <span class="ccform-addon"><i class="fa fa-comment fa-2x"></i></span>
+                <textarea class="ccformfield" name="message" rows="8" id="message" placeholder="Message" required></textarea>
+            </div>
+            <div class="ccfield-prepend">
+                <input class="ccbtn" type="submit" name="btn-send" id="submit" value="Submit">
+            </div>
+            </form>
+            <div id="result"></div>
+            <div id="error_message" style="width:100%; height:100%; display:none; ">
+              <h4>Error</h4>
+              Sorry there was an error sending your form.
+        </div>
+        <div id="success_message" style="width:100%; height:100%; display:none; ">
+        <h2>Success! Your Message was Sent Successfully.</h2>
+        </div>
+        </div> 
+        </div>
+      </div>
+      <br><br><br>
+
+      <footer class="flex-rw">
+
+
+        <section class="footer-social-section flex-rw" style="height:150px;">
+          <span class="footer-social-overlap footer-social-connect">
+            CONNECT <span class="footer-social-small">with</span> ME
+          </span><br>
+          <span class="footer-social-overlap footer-social-icons-wrapper">
+            <a href="https://github.com/Isha82" class="generic-anchor" target="_blank" title="Facebook"
+              itemprop="significantLink"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/isha-goel30" class="generic-anchor" target="_blank" title="Twitter"
+              itemprop="significantLink"><i class="fa fa-linkedin"></i></a>
+            <a href="#" class="generic-anchor" target="_blank" title="Google Plus"
+              itemprop="significantLink"><i class="fa fa-google-plus"></i></a>
+          </span>
+        </section>
+      </footer>
+      <style>
+        //autoprefixer & reset used
+        //Tested on Chrome, Firefox, IE11, and iOS.  The responsiveness & the social section is a bit off on IE11.  I'm looking to fix that.
+        //It would be best to break down the flex properties into logical classes.  I've actually done that more extensively on the live Pavilion site,  but I've only included one here: flex-rw.
+    
+        $primary-light-blue: #8DB9ED;
+        $primary-line-color: #ccc;
+    
+        * {
+          box-sizing: border-box
+        }
+    
+        html,
+        body {
+          height: 100%
+        }
+    
+        body {
+          font: 11px "Open Sans", sans-serif;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          margin: auto;
+          display: flex;
+          flex-flow: column nowrap;
+          //This justify-content is essentially unnecessary in Firefox and Chrome due to the flex: 1 1 auto on the main.  However, it's needed to push the footer down on IE11
+          justify-content: space-between
+        }
+    
+        ul {
+          list-style: none
+        }
+    
+        a {
+          text-decoration: none
+        }
+    
+    
+    
+        .flex-rw {
+          display: flex;
+          flex-flow: row wrap;
+        }
+        main {
+          flex: 1 1 auto; 
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font: 10em "Oswald", sans-serif;
+          color: rgb(155, 155, 155);
+          line-height: 1
+        }
+    
+        footer {
+          background: rgb(55, 55, 55);
+          margin-top: auto;
+          width: 100%
+            overflow-x:hidden;
+        }
+    
+        .footer-list-top {
+          width: 33.333%
+        }
+    
+        .footer-list-top>li {
+          text-align: center;
+          padding-bottom: 10px
+        }
+    
+        .footer-list-header {
+          padding: 10px 0 5px 0;
+          color: #fff;
+          font: 2.3vw "Oswald", sans-serif
+        }
+    
+        .footer-list-anchor {
+          font: 1.3em "Open Sans", sans-serif
+        }
+    
+        .footer-social-section {
+          width: 100%;
+          align-items: center;
+          justify-content: space-around;
+          position: relative;
+          margin-top: 5px;
+        }
+    
+        .footer-social-section::after {
+          content: "";
+          position: absolute;
+          z-index: 1;
+          top: 50%;
+          left: 10px;
+          border-top: 1px solid $primary-line-color;
+          width: calc(100% - 20px)
+        }
+    
+        .footer-social-overlap {
+          position: relative;
+          z-index: 2;
+          background: rgb(55, 55, 55);
+          padding: 0 20px
+        }
+    
+        .footer-social-connect {
+          display: flex;
+          align-items: center;
+          font: 3.5em "Oswald", sans-serif;
+          color: #fff
+        }
+    
+        .footer-social-small {
+          font-size: 0.6em;
+          padding: 0px 20px
+        }
+    
+        .footer-social-overlap>a {
+          font-size: 3em
+        }
+    
+        .footer-social-overlap>a:not(:first-child) {
+          margin-left: 0.38em
+        }
+    
+        .footer-bottom-section {
+          width: 100%;
+          padding: 10px;
+          border-top: 1px solid $primary-line-color;
+          margin-top: 10px
+        }
+    
+        .footer-bottom-section>div:first-child {
+          margin-right: auto
+        }
+    
+        .footer-bottom-wrapper {
+          font-size: 1.5em;
+          color: #fff
+        }
+    
+        .footer-address {
+          display: inline;
+          font-style: normal
+        }
+    
+        @media only screen and (max-width: 768px) {
+          .footer-list-header {
+            font-size: 2em
+          }
+    
+          .footer-list-anchor {
+            font-size: 1.1em
+          }
+    
+          .footer-social-connect {
+            font-size: 2.5em
+          }
+    
+          .footer-social-overlap>a {
+            font-size: 2.24em
+          }
+    
+          .footer-bottom-wrapper {
+            font-size: 1.3em
+          }
+        }
+    
+        @media only screen and (max-width: 568px) {
+          main {
+            font-size: 5em
+          }
+    
+          .footer-list-top {
+            width: 100%
+          }
+    
+          .footer-list-header {
+            font-size: 3em;
+          }
+    
+          .footer-list-anchor {
+            font-size: 1.5em
+          }
+    
+          .footer-social-section {
+            justify-content: center
+          }
+    
+          .footer-social-section::after {
+            top: 25%
+          }
+    
+          .footer-social-connect {
+            margin-bottom: 10px;
+            padding: 0 10px
+          }
+    
+          .footer-social-overlap {
+            display: flex;
+            justify-content: center;
+          }
+    
+          .footer-social-icons-wrapper {
+            width: 100%;
+            padding: 0
+          }
+    
+          .footer-social-overlap>a:not(:first-child) {
+            margin-left: 20px;
+          }
+    
+          .footer-bottom-section {
+            padding: 0 5px 10px 5px
+          }
+    
+          .footer-bottom-wrapper {
+            text-align: center;
+            width: 100%;
+            margin-top: 10px
+          }
+        }
+    
+        @media only screen and (max-width: 480px) {
+          .footer-social-overlap>a {
+            margin: auto
+          }
+    
+          .footer-social-overlap>a:not(:first-child) {
+            margin-left: 0;
+          }
+    
+          .footer-bottom-rights {
+            display: block
+          }
+        }
+    
+        @media only screen and (max-width: 320px) {
+          .footer-list-header {
+            font-size: 2.2em
+          }
+    
+          .footer-list-anchor {
+            font-size: 1.2em
+          }
+    
+          .footer-social-connect {
+            font-size: 2.4em
+          }
+    
+          .footer-social-overlap>a {
+            font-size: 2.24em
+          }
+    
+          .footer-bottom-wrapper {
+            font-size: 1.3em
+          }
+        }
+      </style>
+    
+
+
+       
+       <br><br><br>
     </body>
 </html>

@@ -1,0 +1,61 @@
+
+<!-- Bootstrap CSS <script src="jquery-3.5.1.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function(){
+        $("#reg").click(function(){
+            var data={"username":$("#username").val(),"password":$("#password").val(),
+            "email":$("#email").val(),"phone":$("#phone").val()};
+            cdata=JSON.stringify(data);
+            $.post("signup.php",{"data":cdata},function(r,s){
+                if(r=="done")
+                {
+                    $("#result").html("Successful!");
+                }
+                else
+                $("#result").html("Try Again!!");
+            });
+        });
+    });
+</script> -->
+
+<html>
+    <head>
+        <title>signup</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div>
+            <div style="background-color:#204987; height:20px; "></div>
+            <div><b><h1 style="color:#204987; height:40px ; text-align:center" >ToDo List</h1></b></div>
+            <div style="background-color:#204987; height:20px;"></div>
+    </div><br><br>
+        <div class="container">
+        <div class="signup text-center"
+        <h3 style="color:black;font-weight: bold;font-size: 23px;">REGISTER</h3><br><br>
+        <form action="signup.php" method="POST">
+           Name :<input type="text" id="name" name="name" size="24"><br><br>
+           Email :<input type="text" id="email" name="email" size="24"><br><br>
+           Password :<input type="password" id="password" name="password" size="20"><br><br>
+         
+           <button type="submit"class="btn btn-primary">Register</button>
+           </form>
+           <span>
+           <a href="todologin.php">
+           <button type="button"class="btn btn-primary">Login</button>
+           </a>
+         </span>
+        </div> <br> <br>
+        <div id="result"></div>
+    </div>
+    </body>
+</html>
